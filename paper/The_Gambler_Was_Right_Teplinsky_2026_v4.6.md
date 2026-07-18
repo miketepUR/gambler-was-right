@@ -657,7 +657,7 @@ The individual flips are independent. The decision of when to act on them is not
 
 ## 7. ACKNOWLEDGMENTS AND DECLARATIONS
 
-*Data and code availability.* The complete Python implementation is provided in Appendix A and is available at [GitHub DOI]. All results are deterministic given the specified seeds.
+*Data and code availability.* The complete Python implementation is provided in Appendix A and is available at https://github.com/miketepUR/gambler-was-right, permanently archived at https://doi.org/10.5281/zenodo.21434676. All results are deterministic given the specified seeds.
 
 *AI tools.* The author used AI language model tools for analytical discussion during the development of this study and for drafting assistance in preparing the manuscript. All experimental results are produced by the independently verifiable code above. The author takes sole responsibility for the design, analysis, interpretation, and all claims presented in this paper.
 

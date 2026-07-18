@@ -1,6 +1,6 @@
 # The Gambler Was Right — Paper, Reproduction Code, and Data
 
-<!-- DOI badge will be added here after the Zenodo release -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434676.svg)](https://doi.org/10.5281/zenodo.21434676)
 
 Archive for:
 
