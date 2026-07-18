@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "The Gambler Was Right: reproduction code and data"
+authors:
+  - family-names: Teplinsky
+    given-names: Michael E.
+    affiliation: "Independent Researcher"
+version: 1.0.0
+date-released: "2026-07-18"
+license: MIT
+repository-code: "https://github.com/miketepUR/gambler-was-right"
+preferred-citation:
+  type: article
+  title: "The Gambler Was Right: A Reproducible Challenge to Strategic Indifference in Fair Coin Sequences"
+  authors:
+    - family-names: Teplinsky
+      given-names: Michael E.
+      affiliation: "Independent Researcher"
+  year: 2026

@@ -1,0 +1,7 @@
+# PRNG seeds used for all experiments (Python Mersenne Twister via random.seed)
+# One seed per line. Each seed generates 100,000 independent 80-flip shoes.
+42
+123
+456
+789
+1001
