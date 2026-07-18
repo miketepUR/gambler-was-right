@@ -1,12 +1,12 @@
 # The Gambler Was Right — Paper, Reproduction Code, and Data
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434676.svg)](https://doi.org/10.5281/zenodo.21434676)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434675.svg)](https://doi.org/10.5281/zenodo.21434675)
 
 Archive for:
 
 > Teplinsky, M. E. (2026). *The Gambler Was Right: A Reproducible Challenge to
 > Strategic Indifference in Fair Coin Sequences.* Manuscript in preparation.
-> Full text: [`paper/The_Gambler_Was_Right_Teplinsky_2026_v4.6.md`](paper/The_Gambler_Was_Right_Teplinsky_2026_v4.6.md)
+> Full text: [`paper/The_Gambler_Was_Right_Teplinsky_2026_v4.7.pdf`](paper/The_Gambler_Was_Right_Teplinsky_2026_v4.7.pdf)
 
 Two players observe the same computationally generated fair coin flip
 sequences and place identical 9-bet anti-continuation wagers; they differ
@@ -21,7 +21,7 @@ dependencies beyond the Python 3.6+ standard library.
 
 ```
 paper/
-  The_Gambler_Was_Right_Teplinsky_2026_v4.6.md   Full manuscript text
+  The_Gambler_Was_Right_Teplinsky_2026_v4.7.pdf  Full manuscript (PDF)
 scripts/
   appendix_b_experiment_v3_br_only.py   Primary experiment (paper Appendix; all paper tables)
   compile_report_v3.py                  Parses the primary output into report + JSON
