@@ -1,0 +1,142 @@
+================================================================================
+THE GAMBLER WAS RIGHT: Experimental Reproduction Script
+v3 -- BR-only, REVERSED POLARITY (Run C)
+  TX = direction-change criterion (was MK)
+  MK = streak-depth criterion per T (was TX)
+  Expected: advantages flip sign vs main BR-only run
+Configuration: 5 seeds x 100,000 shoes x 5 thresholds x 1 view (BR)
+Total coin flips: 40,000,000
+EQ_TRIALS = 100; SHOE_LENGTH = 80; STOP_ENTERING = 65
+================================================================================
+  Seed 42...
+  EQ_STABILITY: Seed 42 T3 -- MK busts range: 1630-1810 across 100 trials
+  EQ_STABILITY: Seed 42 T4 -- MK busts range: 885-1013 across 100 trials
+  EQ_STABILITY: Seed 42 T5 -- MK busts range: 520-634 across 100 trials
+  EQ_STABILITY: Seed 42 T6 -- MK busts range: 335-432 across 100 trials
+  EQ_STABILITY: Seed 42 T7 -- MK busts range: 257-341 across 100 trials
+  CHECKPOINT: Seed 42 complete. TX entries (all T): 16004145, MK entries: 799182, TX busts (all T): 31110
+  Seed 123...
+  EQ_STABILITY: Seed 123 T3 -- MK busts range: 1633-1815 across 100 trials
+  EQ_STABILITY: Seed 123 T4 -- MK busts range: 897-1032 across 100 trials
+  EQ_STABILITY: Seed 123 T5 -- MK busts range: 519-621 across 100 trials
+  EQ_STABILITY: Seed 123 T6 -- MK busts range: 344-443 across 100 trials
+  EQ_STABILITY: Seed 123 T7 -- MK busts range: 253-326 across 100 trials
+  CHECKPOINT: Seed 123 complete. TX entries (all T): 15993465, MK entries: 800875, TX busts (all T): 30685
+  Seed 456...
+  EQ_STABILITY: Seed 456 T3 -- MK busts range: 1632-1776 across 100 trials
+  EQ_STABILITY: Seed 456 T4 -- MK busts range: 864-1031 across 100 trials
+  EQ_STABILITY: Seed 456 T5 -- MK busts range: 510-625 across 100 trials
+  EQ_STABILITY: Seed 456 T6 -- MK busts range: 335-432 across 100 trials
+  EQ_STABILITY: Seed 456 T7 -- MK busts range: 238-329 across 100 trials
+  CHECKPOINT: Seed 456 complete. TX entries (all T): 15985750, MK entries: 801086, TX busts (all T): 30945
+  Seed 789...
+  EQ_STABILITY: Seed 789 T3 -- MK busts range: 1636-1770 across 100 trials
+  EQ_STABILITY: Seed 789 T4 -- MK busts range: 879-1015 across 100 trials
+  EQ_STABILITY: Seed 789 T5 -- MK busts range: 526-633 across 100 trials
+  EQ_STABILITY: Seed 789 T6 -- MK busts range: 338-430 across 100 trials
+  EQ_STABILITY: Seed 789 T7 -- MK busts range: 261-348 across 100 trials
+  CHECKPOINT: Seed 789 complete. TX entries (all T): 16001885, MK entries: 799593, TX busts (all T): 31020
+  Seed 1001...
+  EQ_STABILITY: Seed 1001 T3 -- MK busts range: 1691-1873 across 100 trials
+  EQ_STABILITY: Seed 1001 T4 -- MK busts range: 906-1034 across 100 trials
+  EQ_STABILITY: Seed 1001 T5 -- MK busts range: 535-646 across 100 trials
+  EQ_STABILITY: Seed 1001 T6 -- MK busts range: 348-445 across 100 trials
+  EQ_STABILITY: Seed 1001 T7 -- MK busts range: 249-340 across 100 trials
+  CHECKPOINT: Seed 1001 complete. TX entries (all T): 16005190, MK entries: 800071, TX busts (all T): 31550
+
+  RATE_CHECK: T3 -- TX rate: 0.1942% vs Markov 0.1953% -- deviation: 0.59% -- PASS (threshold: 3%)
+  RATE_CHECK: T4 -- TX rate: 0.1942% vs Markov 0.1953% -- deviation: 0.59% -- PASS (threshold: 3%)
+  RATE_CHECK: T5 -- TX rate: 0.1942% vs Markov 0.1953% -- deviation: 0.59% -- PASS (threshold: 3%)
+  RATE_CHECK: T6 -- TX rate: 0.1942% vs Markov 0.1953% -- deviation: 0.59% -- PASS (threshold: 3%)
+  RATE_CHECK: T7 -- TX rate: 0.1942% vs Markov 0.1953% -- deviation: 0.59% -- PASS (threshold: 3%)
+
+  MONO_CHECK: Seed 42 -- T3:+7.8% -> T4:+22.2% -> T5:+52.0% -> T6:+107.7% -> T7:+224.8% -- Monotonic: NO
+  MONO_CHECK: Seed 123 -- T3:+14.3% -> T4:+26.3% -> T5:+58.2% -> T6:+106.2% -> T7:+220.2% -- Monotonic: NO
+  MONO_CHECK: Seed 456 -- T3:+14.8% -> T4:+33.0% -> T5:+59.6% -> T6:+101.6% -> T7:+182.1% -- Monotonic: NO
+  MONO_CHECK: Seed 789 -- T3:+9.2% -> T4:+23.1% -> T5:+52.1% -> T6:+109.8% -> T7:+194.5% -- Monotonic: NO
+  MONO_CHECK: Seed 1001 -- T3:+13.5% -> T4:+27.5% -> T5:+54.7% -> T6:+133.0% -> T7:+232.4% -- Monotonic: NO
+
+
+================================================================================
+TABLE 1: Per-entry catastrophic loss rates by threshold
+================================================================================
+  Threshold   TX Entries  TX Losses   TX Rate   MK Full    Markov
+  --------------------------------------------------------------
+  T3          15,998,087      31062   0.1942%   0.1924%   0.1953%
+  T4          15,998,087      31062   0.1942%   0.1920%   0.1953%
+  T5          15,998,087      31062   0.1942%   0.1917%   0.1953%
+  T6          15,998,087      31062   0.1942%   0.1929%   0.1953%
+  T7          15,998,087      31062   0.1942%   0.2017%   0.1953%
+
+================================================================================
+TABLE 2: Equalized comparison by threshold
+================================================================================
+    T      Entries   TX Loss    MK Loss    Avoided   TX Rate    MK Rate      Adv
+  ----------------------------------------------------------------------------
+  T3    15,998,087     31062     7699.0   -23363.0   0.1942%    0.1924%    +0.9%
+  T4    15,998,087     31062     3780.0   -27282.0   0.1942%    0.1920%    +1.1%
+  T5    15,998,087     31062     1858.0   -29204.0   0.1942%    0.1917%    +1.3%
+  T6    15,998,087     31062      920.0   -30142.0   0.1942%    0.1929%    +0.6%
+  T7    15,998,087     31062      474.0   -30588.0   0.1942%    0.2017%    -3.8%
+
+================================================================================
+TABLE 2B: Equalized catastrophic losses per coin flip
+================================================================================
+    T          Flips   TX Loss    MK Loss    TX/Flip    MK/Flip      Gap
+  --------------------------------------------------------------------
+  T3      40,000,000     31062     7699.0    0.0777%    0.0192%  +303.5%
+  T4      40,000,000     31062     3780.0    0.0777%    0.0095%  +721.7%
+  T5      40,000,000     31062     1858.0    0.0777%    0.0046% +1571.8%
+  T6      40,000,000     31062      920.0    0.0777%    0.0023% +3276.3%
+  T7      40,000,000     31062      474.0    0.0777%    0.0012% +6453.2%
+
+================================================================================
+TABLE 3: Statistical significance by threshold
+================================================================================
+    T     Z_s42    Z_s123    Z_s456    Z_s789   Z_s1001  Combined Z  Bayes Factor   vs Diaconis  5-sig?    Disc Z Disc 5-sig?
+  ------------------------------------------------------------------------------------------------------------------
+  T3      +2.16     +3.78     +3.88     +2.53     +3.65       +7.16       1.3e+11         6e+07     Yes     +5.06         Yes
+  T4      +4.17     +4.81     +5.76     +4.28     +5.05      +10.76       1.4e+25         6e+21     Yes     +7.61         Yes
+  T5      +6.37     +6.89     +7.02     +6.41     +6.68      +14.93       2.4e+48         1e+45     Yes    +10.55         Yes
+  T6      +8.39     +8.27     +8.12     +8.54     +9.52      +19.16       4.8e+79         2e+76     Yes    +13.54         Yes
+  T7     +10.43    +10.21     +9.47     +9.86    +10.56      +22.60      8.5e+110        4e+107     Yes    +15.98         Yes
+
+================================================================================
+TABLE 4: Advantage by seed and threshold (with Std Dev)
+================================================================================
+    T    Seed 42   Seed 123   Seed 456   Seed 789  Seed 1001    Average   StdDev
+  -------------------------------------------------------------------------------
+  T3       +7.8%     +14.3%     +14.8%      +9.2%     +13.5%     +11.9%    3.18%
+  T4      +22.2%     +26.3%     +33.0%     +23.1%     +27.5%     +26.4%    4.27%
+  T5      +52.0%     +58.2%     +59.6%     +52.1%     +54.7%     +55.3%    3.48%
+  T6     +107.7%    +106.2%    +101.6%    +109.8%    +133.0%    +111.7%   12.33%
+  T7     +224.8%    +220.2%    +182.1%    +194.5%    +232.4%    +210.8%   21.45%
+
+================================================================================
+TABLE 5: Side symmetry (H vs T) at T=4
+================================================================================
+   Side   TX Entries  TX Losses   TX Rate  MK Eq Rate  Advantage
+  ----------------------------------------------------------------
+      H            0          0   0.0000%     0.0000%      +0.0%
+      T            0          0   0.0000%     0.0000%      +0.0%
+
+================================================================================
+SUMMARY
+================================================================================
+
+  Total sequences: 500,000
+  Total coin flips: 40,000,000
+  Independent seeds: 5
+  Thresholds tested: 5
+  Data points: 25
+  Gradient monotonic across all 25 points: NO
+  Max equalization std dev: 0.0366 percentage points
+
+  Markov prediction (0.5^9): 0.1953%
+  All TX per-entry rates within 1.5% of prediction: NO
+  All TX per-entry rates within 3.0% of prediction: NO
+  All MK per-entry rates within 3.0% of prediction: NO
+
+================================================================================
+REPRODUCTION COMPLETE
+================================================================================
