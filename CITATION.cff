@@ -5,7 +5,7 @@ authors:
   - family-names: Teplinsky
     given-names: Michael E.
     affiliation: "Independent Researcher"
-version: 1.1.0
+version: 1.2.0
 date-released: "2026-07-18"
 doi: 10.5281/zenodo.21434675
 license: MIT
