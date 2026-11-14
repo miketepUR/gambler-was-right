@@ -2,10 +2,44 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434675.svg)](https://doi.org/10.5281/zenodo.21434675)
 
+> **Notice: superseded (November 2026).** The headline result of this paper
+> does not hold. The "equalized differential" comes from how the comparison
+> sample was drawn, not from the entry rule. The paper matched the two
+> players' bet counts sequence by sequence. That procedure gives extra weight
+> to sequences that contain long streaks, which are the sequences where the
+> comparison player's catastrophic losses occur. When the comparison sample is
+> drawn from all sequences pooled together, the comparison player's rate is
+> the same at every threshold, and both players' per-entry rates are
+> consistent with the theoretical value of 1/512 (0.1953%).
+>
+> The code runs and reproduces the paper's tables exactly. What is superseded
+> is the interpretation of those tables. The preprint of record is v4.8.1
+> (https://doi.org/10.5281/zenodo.21435471). The v4.8.2 PDF in `paper/` is a
+> later revision under a different title; it is superseded on the same
+> grounds, including its discussion of Table 8b. This repository is kept as
+> the record of that work. No further releases are planned.
+
+**Catastrophic-loss rate per entry, by threshold** (5 seeds × 100,000
+sequences of 80 flips; the paper's own data, regenerated from the same seeds)
+
+| Threshold T | Selective player | Comparison player, all entries | Comparison player, per-sequence equalized (as published) | Comparison player, pooled equalization |
+|---|---|---|---|---|
+| 3 | 0.1924% | 0.1942% | 0.2154% | 0.1942% |
+| 4 | 0.1920% | 0.1942% | 0.2426% | 0.1942% |
+| 5 | 0.1917% | 0.1942% | 0.2977% | 0.1942% |
+| 6 | 0.1929% | 0.1942% | 0.4056% | 0.1942% |
+| 7 | 0.2017% | 0.1942% | 0.6233% | 0.1942% |
+
+Theoretical per-entry rate: 1/512 = 0.1953%. The fourth column is the
+expected value of the paper's equalization procedure given the data; the
+fifth is the expected value when the same number of comparison entries is
+drawn from the pooled set. Only the fourth column departs from the baseline.
+
 Archive for:
 
 > Teplinsky, M. E. (2026). *The Gambler Was Right: A Reproducible Challenge to
-> Strategic Indifference in Fair Coin Sequences.* Manuscript in preparation.
+> Strategic Indifference in Fair Coin Sequences.* Preprint, Zenodo.
+> https://doi.org/10.5281/zenodo.21435471. Superseded; see the notice above.
 > Full text: [`paper/The_Gambler_Was_Right_Teplinsky_2026_v4.8.2.pdf`](paper/The_Gambler_Was_Right_Teplinsky_2026_v4.8.2.pdf)
 
 Two players observe the same computationally generated fair coin flip
